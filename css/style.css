@@ -2,12 +2,28 @@ body {
   /* background-color: #cecece; */
   box-sizing: border-box;
   word-break: keep-all;
+  font-size: 14px;
+}
+
+textarea::placeholder,
+input::placeholder{
+  font-size: 14px !important;
+}
+
+a,
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+  color: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Header */
 .navbar-toggler:active,
 .navbar-toggler:focus,
-nav a,
 nav input:focus,
 nav button:focus {
   color: none !important;

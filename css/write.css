@@ -1,0 +1,11 @@
+.card-txt{
+  font-size: 14px;
+  /* font-weight: 700; */
+}
+
+textarea::placeholder,
+input::placeholder,
+select,
+input{
+  font-size: 14px !important;
+}

@@ -1,12 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/seunga1.css">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Travel+ :: 함께하는 재미는 배로 생길걸?! 같이 떠나자!</title>
+
+  <!--Open Graph-->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="To Travel+" />
+  <meta property="og:title" content="To Travel+" />
+  <meta property="og:description" content="함께하는 재미는 배로 생길걸?! 같이 떠나자!" />
+  <meta property="og:image" content="./img/logo.png" />
+  <meta property="og:url" content="#" />
+
+  <!--파비콘-->
+  <!--<link rel="shortcut icon" href="favicon.ico" />-->
+  <link rel="icon" href="./img/logo.png" />
+
+  <!-- bootStrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <!-- style -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/write.css">
+
+
+  <!-- fontawsome -->
+  <script src="https://kit.fontawesome.com/631dd0ab94.js" crossorigin="anonymous"></script>
+
+
+  <!-- 전역변수 -->
+  <script defer src="js/const.js"></script>
+  <!-- 클릭 이벤트 -->
+  <script defer src="js/ck_event.js"></script>
+  <!-- 구조 그리기 이벤트 및 함수 -->
+  <script defer src="js/draw.js"></script>
+
 </head>
 
 <!--고생이 많으십니단,, 
@@ -18,83 +52,86 @@
 
 그..그리고 화면이 너무 커요..! ㅠㅠ
 container 잡아주세요ㅠ_ㅠ..-->
+
 <body>
-    <div class="wirte container-md shadow p-3 mb-5 bg-body-tertiary rounded w-75 p-3">
+  <main id="id" class="bg-gody-tertiary">
+    <div class="conatainer mx-auto py-3">
+      <div class=" wirte container-md shadow px-3 bg-body-tertiary rounded-3 w-75 p-3 d-flex flex-column justify-content-lg-center">
         <div class="mt-5 mb-3">
-            <img src="https://dianashealthyliving.com/wp-content/uploads/2020/01/northern-lights-iceland-2-1440x960.jpg" class="img-fluid rounded" alt="writing page image">
+          <img src="https://dianashealthyliving.com/wp-content/uploads/2020/01/northern-lights-iceland-2-1440x960.jpg"
+            class="img-fluid rounded" alt="writing page image">
         </div>
-        <form class="row g-3 mb-3 mt-3">
-            <div class="col-md-10">
-            <label for="validationServer01" class="form-label">제목</label>
-            <input type="text" class="form-control" id="validationServer01" value="필수" required>
-            </div>
-        <form class="row g-3 mb-3 mt-3">
+        <form class="row g-3 my-3">
+          <div class="col-md-12">
+            <label for="validationServer01" class="form-label card-txt">제목</label>
+            <input type="text" class="form-control" id="validationServer01" placeholder="필수" required>
+          </div>
+        </form>
+        
+          <form class="row g-3 my-3">
             <div class="col-md-4">
-            <label for="validationServer01" class="form-label">나라명</label>
-            <input type="text" class="form-control" id="validationServer01" value="필수" required>
-            </div>
-            <div class="col-md-4">
-            <label for="validationServer02" class="form-label">도시명</label>
-            <input type="text" class="form-control" id="validationServer02" value="필수" required>
-            </div>
-            <div class="col-md-3">
-                <label for="validationServer04" class="form-label">Member</label>
-                <select class="form-select" id="validationServer04" aria-describedby="validationServer04Feedback" required>
-                    <option selected disabled value="">1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                </select>
-                <div id="validationServer04Feedback" class="invalid-feedback">
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-            <label for="validationServer03" class="form-label col">Your Name</label>
-            <input type="text" class="form-control" id="validationServer03" value="Full Name" aria-describedby="validationServer03Feedback" required>
-
-            </div>
-            
-            
-            <div class="col-md-4">
-                <label for="validationServerUsername" class="form-label col">출발 날짜</label>
-                <div class="input-group has-validation">
-                <input type="date" class="form-control" id="validationServerUsername" value="YYYY.MM.DD" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
-                <div id="validationServerUsernameFeedback" class="invalid-feedback">
-                    출발하는 여행날짜를 작성해주세요.
-                </div>
-                </div>
+              <label for="validationServer01" class="form-label card-txt">나라명</label>
+              <input type="text" class="form-control" id="validationServer01" placeholder="필수" required>
             </div>
             <div class="col-md-4">
-                <label for="validationServerUsername" class="form-label col">도착 날짜</label>
-                <div class="input-group has-validation">
-                <input type="date" class="form-control" id="validationServerUsername" value="YYYY.MM.DD" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
-                <div id="validationServerUsernameFeedback" class="invalid-feedback">
-                    돌아오는 여행날짜를 작성해주세요.
-                </div>
-                </div>
+              <label for="validationServer02" class="form-label card-txt">도시명</label>
+              <input type="text" class="form-control" id="validationServer02" placeholder="필수" required>
             </div>
-            </div>
-            </div>
-            <div class="form-floating col-md-10 mb-3 mt-3">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">여행 소개</label>
+            <div class="col-md-4">
+              <label for="validationServer04" class="form-label card-txt">Member</label>
+              <select class="form-select" id="validationServer04" aria-describedby="validationServer04Feedback"
+                required>
+                <option selected disabled value="">1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+              </select>
               </div>
-              <div class="form-floating col-md-10 mb-3 mt-3">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">여행 일정</label>
-              </div>
-            
-            <div class="col-12">
-                <button class="btn btn-primary mb-5 mt-3 col-md-3 offset-md-4 grid text-center" style="--bs-rows: 3; --bs-columns: 3;" type="submit">글쓰기</button>
+
+            <div class="col-md-4">
+              <label for="validationServer03" class="form-label col card-txt">이름</label>
+              <input type="text" class="form-control" id="validationServer03" placeholder="이름"
+                aria-describedby="validationServer03Feedback" required>
             </div>
-            
-    </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+            <div class="col-md-4">
+              <label for="validationServerUsername" class="form-label col card-txt">출발 날짜</label>
+              <div class="input-group has-validation">
+                <input type="date" class="form-control" id="validationServerUsername"
+                  aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                  출발하는 여행날짜를 작성해주세요.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationServerUsername" class="form-label col card-txt">도착 날짜</label>
+              <div class="input-group has-validation">
+                <input type="date" class="form-control" id="validationServerUsername"
+                  aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                  돌아오는 여행날짜를 작성해주세요.
+                </div>
+              </div>
+            </div>
+          </form>
+            <div class="form-floating col-12 mb-3 mt-3">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                style="height: 100px"></textarea>
+              <label for="floatingTextarea2">여행 소개</label>
+            </div>
+            <div class="form-floating col-12 mb-3 mt-3">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                style="height: 100px"></textarea>
+              <label for="floatingTextarea2">여행 일정</label>
+            </div>
+              <button class="col-4 to_travle_btn btn my-3 text-center"
+                type="submit">글쓰기</button>
+</div>
+</div>
+  </main>
 </body>
+
 </html>
