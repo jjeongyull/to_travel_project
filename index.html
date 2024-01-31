@@ -1,21 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>To Travel+ :: 함께하는 재미는 배로 생길걸?! 같이 떠나자!</title>
 
+    <!--Open Graph-->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="To Travel+" />
+  <meta property="og:title" content="To Travel+" />
+  <meta property="og:description" content="함께하는 재미는 배로 생길걸?! 같이 떠나자!"/>
+  <meta property="og:image" content="./img/logo.png" />
+  <meta property="og:url" content="#" />
+
+  <!--파비콘-->
+  <!--<link rel="shortcut icon" href="favicon.ico" />-->
+  <link rel="icon" href="./img/logo.png" />
+
+    <!-- bootStrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <!-- style -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  
+
+  <!-- fontawsome -->
+  <script src="https://kit.fontawesome.com/631dd0ab94.js" crossorigin="anonymous"></script>
+
 
   <!-- 전역변수 -->
-  <script src="js/const.js"></script>
+  <script defer src="js/const.js"></script>
   <!-- 클릭 이벤트 -->
-  <script src="js/ck_event.js"></script>
+  <script defer src="js/ck_event.js"></script>
   <!-- 구조 그리기 이벤트 및 함수 -->
-  <script src="js/draw.js"></script>
+  <script defer src="js/draw.js"></script>
+
 </head>
+
 <body>
+  <!-- Header -->
+  <header id="header">
+    <nav class="navbar sticky-top navbar-expand-lg ">
+      <div class="container">
+        <div class="d-flex col-12 col-lg-auto justify-content-lg-start justify-content-between">
+          <button class="navbar-toggler btn-outline-0 border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <svg class="nav_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#3ed4be" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+          </button>
+          <a class="to_travel_logo" href="#">
+            <img class="to_travle_img" src="./img/logo.png" alt="to_travel">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse me-lg-3 px-3 py-3 px-lg-auto py-lg-auto " id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto pb-2 pb-lg-auto">
+            <li class="nav-item pl-1">
+              <a class="nav_menu nav_menu--active nav-link" aria-current="page" href="#"><span
+                  class="nav_menu--color">홈</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_menu nav-link" href="#"><span class="nav_menu--color">커뮤니티</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_menu nav-link" href="#"><span class="nav_menu--color">일정NOTE</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_menu nav-link" href="#"><span class="nav_menu--color">여행MBTI</span></a>
+            </li>
+          </ul>
+          <div class="nav_search col-12 align-self-end col-lg-auto align-items-center text-align-end">
+            <form class="d-flex align-items-center" role="search">
+              <button class="nav_btn--search rounded-circle btn" type="button">
+                <svg class="nav_icon mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+              </button>  
+              <input class="nav_input pb-2 form-control" placeholder="어디론가 떠날 준비 되었나요?" type="search" aria-label="Search">
+            </form>
+          </div>  
+        </div>
+        <div
+          class="col-12 col-lg-auto col-0 pe-2 d-flex flex-nowrap gap-1 align-items-center flex-lg-row justify-lg-end">
+          <div class="d-flex gap-1 align-items-center justify-content-end col-lg-auto">
+            <div class="dropdown">
+              <button type="button" class="to_travle_btn--reverse nav_btn btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" 
+                aria-expanded="false">
+                글쓰기
+              </button>
+              <ul class="login-dropdown dropdown-menu mt-sm-3 border-0">
+                <li><a class="dropdown-item px-1 py-1" href="#">커뮤니티</a></li>
+                <li><a class="dropdown-item px-1 py-1" href="#">일정쓰기</a></li>
+              </ul>
+            </div>
+            <button type="button" class="to_travle_btn nav_btn btn">로그인</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
   
+  
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-total">
+      <h1>
+        <img src="./img/logo.png" alt="logo" class="logo-style"/>
+      </h1>
+
+      <div class="first-line">
+        <div>
+          <p class="chat-style">
+            고객센터 070-0000-0000
+          </p>
+          <button class="btn-style">1:1 채팅상담</button>
+        </div>
+        <p>
+          <em>실시간 채팅상담</em>
+          매일 9:00 ~ 24:00
+        </p>
+        <p>
+          <em>친절 유선 상담</em>
+          평일 10:00 ~ 19:00 (12:00 ~ 13:00 제외)
+        </p>
+      </div>
+
+      <div class="second-line">
+        <span>
+          <em>주식회사</em>
+          to.ravel+
+        </span>
+        <span>
+          <em>대표</em>
+          toventy
+        </span>
+        <span>
+          <em>개인정보보호책임자</em>
+          toventy
+        </span>
+        <span>
+          <em>사업자등록번호</em>
+          123-45-67890
+        </span>
+        <span>
+          <em>관광사업등록번호</em>
+          20240-2024-000001
+        </span>
+        <span>
+          <em>통신판매업 신고번호</em>
+          2024-서울-0126
+        </span>
+        <address>서울 여행구 떠나로22길</address>
+        <a href="mailto:info@toravel.com">info@toravel.com</a>
+      </div>
+
+      <div class="third-line">
+        <p class="privacy">개인정보 처리방침</p>
+        <div class="legal-info">
+          <p class="common-style">이용약관</p>
+          <p class="common-style">위치기반서비스 이용약관</p>
+          <p class="common-style">취소 및 환불정책</p>
+          <p class="common-style">파트너 입점</p>
+        </div>
+      </div>
+
+      <div class="fourth-style">
+        <a>
+          <img src="#" class="blog-style"/>
+        </a>
+        <a>
+          <!-- <i class="fa-brands fa-instagram"></i>-->
+          <img src="#" class="instagram-style"/>
+        </a>
+      </div>
+
+      <div class="fifth-style">
+        <p class="fifth-str">
+          자사는 서울특별시관광협회 공제영업보증보험에 가입되어 있습니다.
+          <br>
+          to.ravel+는 통신판매중개자이며 통신판매 당사자가 아닙니다.
+          상품정보 및 거래에 관한 책임은 판매자에게 있습니다.
+          <br>
+          Copyright © TO.RAVEL+ Inc. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>
