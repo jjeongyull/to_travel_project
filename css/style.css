@@ -97,7 +97,7 @@ nav button:focus {
   width: 0;
   height: 8px;
   background: rgba(255, 255, 255 .2);
-  transition: 400ms ease all;
+  /* transition: 400ms ease all; */
 }
 
 .nav_menu:hover .nav_menu--color {
@@ -116,17 +116,19 @@ nav button:focus {
 .nav_menu:active,
 .nav_menu--active {
   color: #202020;
+  font-weight: 700;
   transform: translateY(-2px);
 }
 
-.nav_menu:active .nav-link--color::after,
-.nav_menu--active .nav-link--color::after {
+.nav_menu:active .nav_menu--color::after,
+.nav_menu--active .nav_menu--color::after {
   content: '';
   width: 100%;
   height: 8px;
   position: absolute;
   bottom: -10px;
-  /* transform: translateY(10px); */
+  transform: translateY(10px);
+  /* transition: none; */
   background: rgba(62, 212, 190, .5);
 }
 
