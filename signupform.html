@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Travel+ :: 함께하는 재미는 배로 생길걸?! 같이 떠나자!</title>
+
+    <!--Open Graph-->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="To Travel+" />
+  <meta property="og:title" content="To Travel+" />
+  <meta property="og:description" content="함께하는 재미는 배로 생길걸?! 같이 떠나자!"/>
+  <meta property="og:image" content="./img/logo.png" />
+  <meta property="og:url" content="#" />
+
+  <!--파비콘-->
+  <!--<link rel="shortcut icon" href="favicon.ico" />-->
+  <link rel="icon" href="./img/logo.png" />
+
+    <!-- bootStrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <!-- style -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/signupform.css">
+  
+
+  <!-- fontawsome -->
+  <script src="https://kit.fontawesome.com/631dd0ab94.js" crossorigin="anonymous"></script>
+
+
+  <!-- 전역변수 -->
+  <script defer src="js/const.js"></script>
+  <!-- 클릭 이벤트 -->
+  <script defer src="js/ck_event.js"></script>
+  <!-- 구조 그리기 이벤트 및 함수 -->
+  <script defer src="js/draw.js"></script>
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <nav class="navbar sticky-top navbar-expand-lg ">
+      <div class="container">
+        <div class="d-flex col-12 col-lg-auto justify-content-lg-start justify-content-between">
+          <button class="navbar-toggler btn-outline-0 border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <svg class="nav_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#3ed4be" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+          </button>
+          <a class="to_travel_logo" href="#">
+            <img class="to_travle_img" src="./img/logo.png" alt="to_travel">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse me-lg-3 px-3 py-3 px-lg-auto py-lg-auto " id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto pb-2 pb-lg-auto">
+            <li class="nav-item pl-1">
+              <a class="nav_menu nav_menu--active nav-link" aria-current="page" href="#"><span
+                  class="nav_menu--color">홈</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_menu nav-link" href="#"><span class="nav_menu--color">커뮤니티</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_menu nav-link" href="#"><span class="nav_menu--color">일정NOTE</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_menu nav-link" href="#"><span class="nav_menu--color">여행MBTI</span></a>
+            </li>
+          </ul>
+          <div class="nav_search col-12 align-self-end col-lg-auto align-items-center text-align-end">
+            <form class="d-flex align-items-center" role="search">
+              <button class="nav_btn--search rounded-circle btn" type="button">
+                <svg class="nav_icon mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+              </button>  
+              <input class="nav_input pb-2 form-control" placeholder="어디론가 떠날 준비 되었나요?" type="search" aria-label="Search">
+            </form>
+          </div>  
+        </div>
+        <div
+          class="col-12 col-lg-auto col-0 pe-2 d-flex flex-nowrap gap-1 align-items-center flex-lg-row justify-lg-end">
+          <div class="d-flex gap-1 align-items-center justify-content-end col-lg-auto">
+            <div class="dropdown">
+              <button type="button" class="to_travle_btn--reverse nav_btn btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" 
+                aria-expanded="false">
+                글쓰기
+              </button>
+              <ul class="login-dropdown dropdown-menu mt-sm-3 border-0">
+                <li><a class="dropdown-item px-1 py-1" href="#">커뮤니티</a></li>
+                <li><a class="dropdown-item px-1 py-1" href="#">일정쓰기</a></li>
+              </ul>
+            </div>
+            <button type="button" class="to_travle_btn nav_btn btn">로그인</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+                
+
+  <div class="main">
+    <div class="main-signup">
+      <div class="signup-style">
+        <h3 class="text-style">회원가입</h3>
+        <main>
+          <div class="col-md-7 col-lg-8">
+            <h5 class="mb-3 entry-required">입력사항</h5>
+            <form class="needs-validation" novalidate="">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">이름</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">성</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="email" class="form-label">이메일주소</label>
+                  <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="password" class="form-label">비밀번호</label>
+                  <input type="password" class="form-control" id="address" placeholder="비밀번호 (8자~12자, 영문+숫자+특수문자 사용)" required="">
+                  <div class="invalid-feedback">
+                    Please enter your shipping address.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="country" class="form-label">국가</label>
+                  <select class="form-select" id="country" required="">
+                    <option value="">국가 선택</option>
+                    <option>+30 그리스</option>
+                    <option>+31 네덜란드</option>
+                    <option>+47 노르웨이</option>
+                    <option>+64 뉴질랜드</option>
+                    <option>+886 대만</option>
+                    <option>+45 덴마크</option>
+                    <option>+49 독일</option>
+                    <option>+856 라오스</option>
+                    <option>+371 라트비아</option>
+                    <option>+7 러시아</option>
+                    <option>+961 레바논</option>
+                    <option>+40 루마니아</option>
+                    <option>+352 룩셈부르크</option>
+                    <option>+370 리투아니아</option>
+                    <option>+853 마카오</option>
+                    <option>+389 마케도니아</option>
+                    <option>+60 말레이시아</option>
+                    <option>+356 몰타</option>
+                    <option>+976 몽골</option>
+                    <option>+1 미국</option>
+                    <option>+95 미얀마</option>
+                    <option>+973 바레인</option>
+                    <option>+880 방글라데시</option>
+                    <option>+84 베트남</option>
+                    <option>+32 벨기에</option>
+                    <option>+375 벨라루스</option>
+                    <option>+387 보스니아헤르체고비나</option>
+                    <option>+359 불가리아</option>
+                    <option>+673 브루나이</option>
+                    <option>+966 사우디아라비아</option>
+                    <option>+381 세르비아</option>
+                    <option>+46 스웨덴</option>
+                    <option>+41 스위스</option>
+                    <option>+34 스페인</option>
+                    <option>+421 슬로바키아</option>
+                    <option>+386 슬로베니아</option>
+                    <option>+65 싱가포르</option>
+                    <option>+971 아랍에미리트</option>
+                    <option>+374 아르메니아</option>
+                    <option>+353 아일랜드</option>
+                    <option>+994 아제르바이잔</option>
+                    <option>+93 아프가니스탄</option>
+                    <option>+355 알바니아</option>
+                    <option>+372 에스토니아</option>
+                    <option>+44 영국</option>
+                    <option>+967 예멘</option>
+                    <option>+968 오만</option>
+                    <option>+43 오스트리아</option>
+                    <option>+962 요르단</option>
+                    <option>+998 우즈베키스탄</option>
+                    <option>+380 우크라이나</option>
+                    <option>+972 이스라엘</option>
+                    <option>+20 이집트</option>
+                    <option>+39 이탈리아</option>
+                    <option>+91 인도</option>
+                    <option>+62 인도네시아</option>
+                    <option>+81 일본</option>
+                    <option>+86 중국</option>
+                    <option>+420 체코</option>
+                    <option>+855 캄보디아</option>
+                    <option>+965 쿠웨이트</option>
+                    <option>+385 크로아티아</option>
+                    <option>+996 키르기스스탄</option>
+                    <option>+357 키프로스</option>
+                    <option>+992 타지키스탄</option>
+                    <option>+66 태국</option>
+                    <option>+90 터키</option>
+                    <option>+993 투르크메니스탄</option>
+                    <option>+92 파키스탄</option>
+                    <option>+675 파푸아뉴기니</option>
+                    <option>+351 포르투갈</option>
+                    <option>+48 폴란드</option>
+                    <option>+33 프랑스</option>
+                    <option>+358 핀란드</option>
+                    <option>+63 필리핀</option>
+                    <option>+82 한국</option>
+                    <option>+36 헝가리</option>
+                    <option>+61 호주</option>
+                    <option>+852 홍콩</option>
+
+
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="phonNum" class="form-label">핸드폰 번호</label>
+
+                  <div class="d-flex">
+                    <div class="col-9">
+                      <input type="text" class="form-control" id="phoneNum" placeholder="핸드폰 번호 (- 없이 입력)" value="" required="">
+                      <div class="invalid-feedback">
+                        Please enter a valid phone number.
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <button class="w-100 btn btn-color btn-lg" type="submit">인증번호 요청</button>
+                      <div class="invalid-feedback">
+                        Please enter a valid phone number.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="sex" class="form-label">성별</label>
+                  <select class="form-select" id="sex" required="">
+                    <option value="">성별 선택</option>
+                    <option>남</option>
+                    <option>여</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid sex.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="yearMonthDay" class="form-label">생년월일</label>
+                  <div class="d-flex">
+                    <div class="col-6">
+                      <input type="year" class="form-control" id="year" placeholder="연도 (예:1995)">
+                      <div class="invalid-feedback">
+                        Please enter a valid year.
+                      </div>
+                    </div>
+
+                    <div class="col-3">    
+                      <select class="form-select" id="month" required="">
+                        <option value="">월</option>
+                        <option>1월</option>
+                        <option>2월</option>
+                        <option>3월</option>
+                        <option>4월</option>
+                        <option>5월</option>
+                        <option>6월</option>
+                        <option>7월</option>
+                        <option>8월</option>
+                        <option>9월</option>
+                        <option>10월</option>
+                        <option>11월</option>
+                        <option>12월</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid month.
+                      </div>
+                    </div>
+  
+                    <div class="col-3">    
+                      <select class="form-select" id="day" required="">
+                        <option value="">일</option>
+                        <option>1일</option>
+                        <option>2일</option>
+                        <option>3일</option>
+                        <option>4일</option>
+                        <option>5일</option>
+                        <option>6일</option>
+                        <option>7일</option>
+                        <option>8일</option>
+                        <option>9일</option>
+                        <option>10일</option>
+                        <option>11일</option>
+                        <option>12일</option>
+                        <option>13일</option>
+                        <option>14일</option>
+                        <option>15일</option>
+                        <option>16일</option>
+                        <option>17일</option>
+                        <option>18일</option>
+                        <option>19일</option>
+                        <option>20일</option>
+                        <option>21일</option>
+                        <option>22일</option>
+                        <option>23일</option>
+                        <option>24일</option>
+                        <option>25일</option>
+                        <option>26일</option>
+                        <option>27일</option>
+                        <option>28일</option>
+                        <option>29일</option>
+                        <option>30일</option>
+                        <option>31일</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid day.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="my-4">
+              <h5 class="mb-3 entry-required">이용약관</h5>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="same-address">
+                <label class="form-check-label" for="same-address">(필수) 서비스 이용약관 동의</label>
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">(필수) 개인정보처리방침 동의</label>
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">(필수) 위치기반서비스 동의</label>
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">(선택) 마케팅 정보 활용 동의</label>
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">(필수) 만 14세 이상입니다.</label>
+              </div>
+
+              <hr class="my-4">
+              <button class="w-100 btn btn-color btn-lg" type="submit">회원가입</button>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-total">
+      <h1>
+        <img src="./img/logo.png" alt="logo" class="logo-style" />
+      </h1>
+
+      <div class="first-line">
+        <div>
+          <p class="chat-style">고객센터 070-0000-0000</p>
+          <button class="btn-style">1:1 채팅상담</button>
+        </div>
+        <p>
+          <em>실시간 채팅상담</em>
+          매일 9:00 ~ 24:00
+        </p>
+        <p>
+          <em>친절 유선 상담</em>
+          평일 10:00 ~ 19:00 (12:00 ~ 13:00 제외)
+        </p>
+      </div>
+
+      <div class="second-line">
+        <span>
+          <em>주식회사</em>
+          to.ravel+
+        </span>
+        <span>
+          <em>대표</em>
+          toventy
+        </span>
+        <span>
+          <em>개인정보보호책임자</em>
+          toventy
+        </span>
+        <span>
+          <em>사업자등록번호</em>
+          123-45-67890
+        </span>
+        <span>
+          <em>관광사업등록번호</em>
+          20240-2024-000001
+        </span>
+        <span>
+          <em>통신판매업 신고번호</em>
+          2024-서울-0126
+        </span>
+        <address>서울 여행구 떠나로22길</address>
+        <a href="mailto:info@toravel.com">info@toravel.com</a>
+      </div>
+
+      <div class="third-line">
+        <p class="privacy">개인정보 처리방침</p>
+        <div class="legal-info">
+          <p class="common-style">이용약관</p>
+          <p class="common-style">위치기반서비스 이용약관</p>
+          <p class="common-style">취소 및 환불정책</p>
+          <p class="common-style">파트너 입점</p>
+        </div>
+      </div>
+
+      <div class="fourth-style">
+        <a>
+          <img src="./img/naver_blog.png" class="blog-style" />
+        </a>
+        <a>
+          <img src="./img/instragram.png" class="instagram-style" />
+        </a>
+      </div>
+
+      <div class="fifth-style">
+        <p class="fifth-str">
+          자사는 서울특별시관광협회 공제영업보증보험에 가입되어 있습니다.
+          <br />
+          to.ravel+는 통신판매중개자이며 통신판매 당사자가 아닙니다. 상품정보
+          및 거래에 관한 책임은 판매자에게 있습니다.
+          <br />
+          Copyright © TO.RAVEL+ Inc. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
