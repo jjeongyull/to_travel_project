@@ -6,9 +6,17 @@ input{
   font-size: 14px !important;
 }
 
-main .w-60{
-  width: 60%!important;
+main {
+  overflow-y: hidden;
 }
+
+.login_page{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
 
 main .text-style {
   text-align: center;
