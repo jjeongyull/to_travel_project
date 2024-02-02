@@ -1,4 +1,10 @@
 /* main - login form */
+textarea::placeholder,
+input::placeholder,
+select,
+input{
+  font-size: 14px !important;
+}
 
 main .w-60{
   width: 60%!important;
